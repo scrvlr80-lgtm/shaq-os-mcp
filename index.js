@@ -31,6 +31,11 @@ server.tool("get_shaq_os_catalog",
     }
 );
 
+// PORTA PER SVEGLIARE IL SERVER (UPTIME ROBOT)
+app.get('/ping', (req, res) => {
+    res.status(200).send("Sono sveglio, cazzo!");
+});
+
 // GESTIONE DELLE CONNESSIONI SSE
 let transport;
 
